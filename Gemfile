@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+# https://github.com/heartcombo/devise#getting-started
+gem 'devise'
+
 # https://docs.rollbar.com/docs/ruby#section-getting-started/
 gem 'rollbar'
 

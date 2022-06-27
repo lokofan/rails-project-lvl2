@@ -1,6 +1,9 @@
 install:
 	bundle install
 
+migrate:
+	bin/rails db:migrate
+
 lint: rubocop slim-lint
 
 rubocop:
@@ -20,3 +23,6 @@ prod_s:
 
 c:
 	bin/rails c
+
+heroku-push-dev:
+	git push heroku dev:master --force

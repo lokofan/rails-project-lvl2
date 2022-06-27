@@ -1,1 +1,10 @@
-<h1>Welcome</h1>
+<h1>Welcome, <%= current_user.present? ? current_user.email : 'Guest' %></h1>
+
+<%= link_to 'Sign Up', new_user_registration_path %>
+<br>
+<%= link_to 'Sign In', new_user_session_path %>
+<br>
+
+<% if user_signed_in? %>
+  <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+<% end %>
